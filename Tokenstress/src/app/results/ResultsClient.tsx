@@ -354,7 +354,7 @@ style: { fill: 'hsl(220 14% 45%)', fontSize: 10 },
 <Tooltip
 contentStyle={{ background: 'hsl(220 14% 10%)', border: '1px solid hsl(220 13% 20%)', borderRadius: 8, fontSize: 12 }}
 labelStyle={{ color: 'hsl(220 10% 80%)' }}
-formatter={(value: any) => [`${v}`, 'Fragility']}
+formatter={(value: any) => [String(value), 'Fragility']}
 labelFormatter={(x) => `Input: ${x}`}
 />
 {/* Reference dot for current value */}
