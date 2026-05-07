@@ -258,7 +258,7 @@ tokenName={token?.name ?? null}
 tokenSymbol={token?.symbol ?? null}
 address={address}
 mode={inputs.mode}
-modeLabel={modeLabel}
+MODE_LABELS={MODE_LABELS}
 result={result}
 explanation={explanation}
 afterLiquidity={afterLiquidity}
@@ -285,7 +285,7 @@ Re-run →
 <div className="space-y-1">
 <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">Fragility Index</p>
 <p className="text-4xl font-bold text-foreground">{result.fragilityIndex}</p>
-<p className="text-xs text-muted-foreground">Based on {modeLabel} scenario</p>
+<p className="text-xs text-muted-foreground">Based on {MODE_LABELS} scenario</p>
 </div>
 </Card>
 <Card className="flex flex-col items-center justify-center min-w-[160px] text-center space-y-2">
@@ -599,7 +599,7 @@ tokenName={token?.name ?? null}
 tokenSymbol={token?.symbol ?? null}
 address={address}
 mode={inputs.mode}
-modeLabel={modeLabel}
+MODE_LABELS={MODE_LABELS}
 result={result}
 explanation={explanation}
 afterLiquidity={afterLiquidity}
