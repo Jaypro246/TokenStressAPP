@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState, useCallback } from 'react';
-import dynamic from 'next/dynamic';
 import type { SimResult, SimMode } from '@/lib/simulation';
 import ExportCard from './ExportCard';
 
