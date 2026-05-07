@@ -1,6 +1,5 @@
 'use client';
 
-import { useMemo } from 'react';
 import ExportButtons from '@/components/ExportButtons';
 import {
 BarChart,
@@ -105,7 +104,6 @@ return v.toFixed(4);
 }
 
 function buildExplanation(mode: SimMode, inputs: Props['inputs'], result: SimResult): string {
-const modeLabel = MODE_LABELS[mode];
 const fi = result.fragilityIndex;
 const risk = result.riskLabel;
 
@@ -178,7 +176,6 @@ tokenBackUrl,
 afterLiquidity,
 afterHolders,
 }: Props) {
-const modeLabel = MODE_LABELS[inputs.mode];
 const banner = RISK_BANNER[result.riskLabel];
 
 /* Bar chart: before vs after for 3 metrics */
@@ -241,7 +238,6 @@ return (
 <div className="space-y-1 flex-1">
 <div className="flex flex-wrap items-center gap-2">
 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-{modeLabel} Scenario
 </span>
 {token?.name && (
 <span className="text-xs font-mono text-muted-foreground">· {token.name} ({token.symbol})</span>
@@ -358,7 +354,7 @@ style: { fill: 'hsl(220 14% 45%)', fontSize: 10 },
 <Tooltip
 contentStyle={{ background: 'hsl(220 14% 10%)', border: '1px solid hsl(220 13% 20%)', borderRadius: 8, fontSize: 12 }}
 labelStyle={{ color: 'hsl(220 10% 80%)' }}
-formatter={(v: number) => [`${v}`, 'Fragility']}
+formatter={(value: any) => [`${v}`, 'Fragility']}
 labelFormatter={(x) => `Input: ${x}`}
 />
 {/* Reference dot for current value */}
